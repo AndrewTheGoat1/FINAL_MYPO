@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        transition: all 0.2s linear;
+      }
+
+      body {
+        background-color: #c5e6ee;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .input-label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      .input-label label {
+        margin-bottom: 5px;
+        font-size: 16px;
+        color: #000;
+      }
+
+      .input {
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        border: 2px solid #000;
+        padding: 10px;
+        font-size: 16px;
+        color: #333;
+        background-color: transparent;
+      }
+
+      form {
+        padding: 30px;
+        width: 500px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .title {
+        font-size: 24px;
+        color: #000;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        background: #2ecc71;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background: #27ae60;
+      }
+
+      .error-message {
+        color: #e74c3c;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      /* Added styles for success message */
+      .success-message {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        place-items: center;
+        background: #333333cb;
+      }
+      .message-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .message-box h3 {
+        color: #27ae60;
+        margin-bottom: 20px;
+      }
+      .message-box a {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <div class="title">Billing Information</div>
+
+      <!-- Full Name -->
+      <div class="input-label">
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          class="input"
+          id="fullName"
+          placeholder="John Doe"
+          required
+        />
+      </div>
+
+      <!-- Phone Number -->
+      <div class="input-label">
+        <label for="phoneNumber">Phone Number:</label>
+        <input
+          type="tel"
+          class="input"
+          id="phoneNumber"
+          placeholder="1234567890"
+          required
+        />
+      </div>
+
+      <!-- Address -->
+      <div class="input-label">
+        <label for="address">Address:</label>
+        <input
+          type="text"
+          class="input"
+          id="address"
+          placeholder="123 Main St"
+          required
+        />
+      </div>
+
+      <!-- City -->
+      <div class="input-label">
+        <label for="city">City:</label>
+        <input
+          type="text"
+          class="input"
+          id="city"
+          placeholder="Anytown"
+          required
+        />
+      </div>
+
+      <!-- State -->
+      <div class="input-label">
+        <label for="state">State:</label>
+        <input
+          type="text"
+          class="input"
+          id="state"
+          placeholder="Example State"
+          required
+        />
+      </div>
+      <!-- Payment Method -->
+      <div class="input-label">
+        <label for="paymentMethod">Payment Method:</label>
+        <select class="input" id="paymentMethod" required>
+          <option value="" disabled selected>Select Payment Method</option>
+          <option value="KBZPay">KBZPay</option>
+          <option value="WaveMoney">WaveMoney</option>
+          <option value="CB Pay">CB Pay</option>
+          <option value="AYA Pay">AYA Pay</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="button" class="submit-btn" onclick="validateForm()">
+        Proceed to Checkout
+      </button>
+
+      <!-- Error Message -->
+      <div id="errorMessage" class="error-message"></div>
+    </form>
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+      <div class="message-box">
+        <h3>Checkout successfully!</h3>
+        <a href="./invoice.html" class="checkout-btn" onclick="goToInvoice()"
+          >Get Invoice</a
+        >
+      </div>
+    </div>
+
+    <script>
+      var successMessage = document.getElementById("successMessage");
+      function validateForm() {
+        var fullName = document.getElementById("fullName").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var address = document.getElementById("address").value;
+        var city = document.getElementById("city").value;
+        var state = document.getElementById("state").value;
+        var paymentMethod = document.getElementById("paymentMethod").value;
+
+        var errorMessage = document.getElementById("errorMessage");
+
+        if (
+          fullName &&
+          phoneNumber &&
+          address &&
+          city &&
+          state &&
+          paymentMethod
+        ) {
+          // Display success message
+          successMessage.style.display = "grid";
+
+          // Clear any previous error message
+          errorMessage.innerHTML = "";
+        } else {
+          // Display error message
+          errorMessage.innerHTML = "Please fill in all the required fields.";
+
+          // Hide success message
+          successMessage.style.display = "none";
+        }
+      }
+
+      function goToInvoice() {
+        successMessage.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Lists</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <style>
+      .cartLists-box {
+        max-width: 1024px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+      }
+      table {
+        width: 100%;
+      }
+
+      .cart-img {
+        height: 100px;
+      }
+
+      .qty-btns {
+        display: flex;
+        gap: 5px;
+      }
+
+      .qty-btns button {
+        width: 35px;
+        height: 35px;
+      }
+
+      .checkout-btn {
+        padding: 10px;
+        display: block;
+        width: 100px;
+        text-align: center;
+        background-color: #333;
+        color: wheat;
+        text-decoration: none;
+      }
+
+      .textEnd {
+        text-align: end;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header  -->
+    <section id="header" class="header">
+      <h4 class="logo">MYPO</h4>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="about.html">About & Contact</a></li>
+        </ul>
+      </div>
+      <div class="header-btns">
+        <button class="login-btn">Login</button>
+        <div class="shopping-cart" onclick="goToAddToCart()">
+          <img src="img/shopbag.svg" />
+          <span class="quantity">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- for cart lists  -->
+    <section class="cartLists-body">
+      <div class="cartLists-box">
+        <p>Shopping Carts</p>
+        <table>
+          <tbody id="tbody">
+            <!-- <tr style="border-bottom: 1px solid black">
+              <td>
+                <img src="./img/newproduct/c22.jpg" alt="" class="cart-img" />
+              </td>
+              <td>Fashion Bag</td>
+              <td>
+                <div class="qty-btns">
+                  <button>-</button>
+                  <button>1</button>
+                  <button>+</button>
+                </div>
+              </td>
+              <td class="textEnd">20000 MMK</td>
+            </tr> -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td style="border-top: 1px solid black; padding: 20px 0"></td>
+              <td style="border-top: 1px solid black; padding: 20px 0"></td>
+              <td style="border-top: 1px solid black; padding: 20px 0">
+                Total
+              </td>
+              <td
+                class="textEnd"
+                style="border-top: 1px solid black; padding: 20px 0"
+                id="total-price"
+              ></td>
+              <td style="border-top: 1px solid black; padding: 20px 0"></td>
+            </tr>
+          </tfoot>
+        </table>
+        <a href="./bill.html" class="checkout-btn">Checkout</a>
+      </div>
+    </section>
+    <script src="./products.js" defer></script>
+    <script src="./addtocart.js" defer></script>
+    <script src="./addtocartpage.js" defer></script>
+  </body>
+</html>

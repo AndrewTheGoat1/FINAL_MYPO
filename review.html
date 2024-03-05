@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Review Page</title>
+</head>
+
+<body>
+    <section id="header" class="header">
+        <h4 class="logo">MYPO</h4>
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a class="active"  href="review.html">Reviews</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+        <div class="header-btns">
+          <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+          <div class="shopping-cart" onclick="goToAddToCart()">
+            <img src="img/shopbag.svg" />
+            <span class="quantity">0</span>
+          </div>
+        </div>
+      </section>
+    <div class="container">
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="shop revp">Customer Reviews</div>
+            <div class="lap" style="margin-bottom: 20px;">Please Review our website</div>
+            <form action="#" id="reviewForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="about">About:</label>
+                <textarea id="about" name="about" rows="4" placeholder="Tell us more about your experience..." required></textarea>
+                <div class="btn">
+                    <button class="post" type="submit">Post</button>
+                </div>
+            </form>
+            
+                
+            <div id="thanksMessage" style="margin: 20px 0;">
+                Thanks for rating us!
+            </div>
+        </div>
+
+        <!-- Reviews Container -->
+        <div class="reviews-container">
+            <div class="shop revp">Customer Reviews</div>
+            <div class="reviews" id="reviewBoxes">
+        </div>
+    </div>
+
+        </div>
+        </div>
+    </div>
+
+    <footer class="section-p1">
+      <div class="col">
+          <a href="/index.html" style="font-size: larger;">MYPO</a>
+          <h4>Contact</h4>
+          <p><strong>Address: </strong> Pathein , Ayeyarwady</p>
+          <p><strong>Phone: </strong> +959384829218</p>
+          <div class="follow">
+              <h4>Follow Us</h4>
+              <div class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-pinterest-p"></i>
+                  <i class="fab fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+  
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
+        <a href="about.html">Contact Us</a>
+      </div>
+  
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="login.html">Sign In</a>
+        <a href="about.html">Help</a>
+      </div>
+  
+      <div class="copyright">
+          <p>@ 2023, MYPO etc - Shopping Website</p>
+      </div>
+  </footer>
+
+    <script src="./addtocart.js"></script>
+
+<script>
+    const reviewForm = document.getElementById('reviewForm');
+    const thanksMessage = document.getElementById('thanksMessage');
+    const reviewsList = [
+        {
+            name: 'Hsar Pwint',
+            about: 'I am extremely satisfied with the quality of the products. The packaging is also excellent. ',
+            starts: 3,
+            job: "Web Developer",
+        },
+        {
+            name: 'Hsar Pwint Oo',
+            about: 'I am delighted to share my positive experience with this fashion website. The service is top-notch, with very qualified and attentive customer service. Moreover, the product quality exceeded expectations. Overall, a fantastic shopping experience!',
+            starts: 3,
+            job: "Loyal customer",
+        }
+    ];
+    const jobOptions = ['Web Developer','Techer','Programmer','Software Engineer','Software Architect','Database Anylysis','QA Tester'];
+    const reviewBoxes = document.getElementById('reviewBoxes');
+
+    const  randomIntFromInterval = (min, max) =>  {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    const reloadReviews = () => {
+        reviewBoxes.innerHTML = '';
+        reviewsList.forEach((review,key) => { 
+            var box = document.createElement('div');
+            box.classList.add('box');
+
+            var quoteIcon = document.createElement('i');
+            quoteIcon.classList.add('quote', 'fas', 'fa-quote-right');
+
+            var content = document.createElement('div');
+            content.classList.add('content');
+
+            var info = document.createElement('div');
+            info.classList.add('info');
+
+            var nameElement = document.createElement('div');
+            nameElement.classList.add('name');
+            nameElement.textContent = review.name;
+
+            var jobElement = document.createElement('div');
+            jobElement.classList.add('job');
+            jobElement.textContent = review.job;
+
+            var stars = document.createElement('div');
+            stars.classList.add('stars');
+
+            for (var i = 0; i < review.stars; i++) {
+                var starIcon = document.createElement('i');
+                starIcon.classList.add('fas', 'fa-star');
+                stars.appendChild(starIcon);
+            }
+
+            info.appendChild(nameElement);
+            info.appendChild(jobElement);
+            info.appendChild(stars);
+
+            var imageContainer = document.createElement('div');
+            imageContainer.classList.add('image');
+
+            var image = document.createElement('img');
+            image.src = 'img/people/p.jpg';
+            image.alt = '';
+
+            imageContainer.appendChild(image);
+
+            content.appendChild(info);
+            content.appendChild(imageContainer);
+
+            var text = document.createElement('div');
+            text.classList.add('text');
+            text.textContent = review.about
+            // Append quote icon, content, and text to box
+            box.appendChild(quoteIcon);
+            box.appendChild(content);
+            box.appendChild(text);
+
+            reviewBoxes.appendChild(box);
+
+        })
+    }
+
+    reviewForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Check if all fields are filled
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const about = document.getElementById('about').value;
+        const job   = jobOptions[randomIntFromInterval(0,6)];
+        const stars = randomIntFromInterval(2,5);
+
+        if (name && email && about) {
+            const formData = { 
+                name,
+                email,
+                about,
+                job,
+                stars
+            }
+            reviewsList.push(formData)
+            reloadReviews()
+            
+            // reviewForm.style.display = 'none';
+            // thanksMessage.style.display = 'block';
+        } else {
+            // Handle the form submission as usual
+            // You can add your own logic here
+            console.log('Please fill in all the required fields.');
+        }
+    });
+
+    reloadReviews()
+</script>

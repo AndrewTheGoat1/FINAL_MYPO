@@ -1,0 +1,231 @@
+/* Header  */
+/* #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+} */
+/* body{
+    background-color: #c5e6ee;
+  } */
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+/* Header Done  */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #c5e6ee;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Form Styles */
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* Reviews Styles */
+.reviews-container {
+  flex: 1;
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  background: #faf8e7;
+  border: 2px solid #ca931c;
+  border-radius: 10px;
+  width: calc(48% - 10px);
+  padding: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.quote {
+  font-size: 20px;
+  color: #ca931c;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 17px;
+  color: #ca931c;
+}
+
+.job {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ca931c;
+  margin-bottom: 5px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars i {
+  color: #ffed12;
+  margin-right: 5px;
+}
+
+.image {
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ca931c;
+}
+
+/* Additional Decoration */
+.box .text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Responsive Style */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .reviews-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .box {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #thanksMessage {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4caf50;
+  }
+}
+
+/* body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+/* .container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Set the width to 100% */
+/* max-width: 600px; Set a maximum width if desired */
+/* margin: auto; */
+
+form {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: calc(100% - 24px); /* Adjusted width to consider padding */
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#message {
+  margin-top: 10px;
+  color: #333;
+}

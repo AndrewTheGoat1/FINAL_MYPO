@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Limited Edition Events</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #c5e6ee; /* Blue background color */
+            color: #161515; /* White text color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .event-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Don't Miss Out!</h1>
+    <p>Get ready for our upcoming limited edition events.</p>
+
+    <div id="event1">
+        <h2>June 6th Event</h2>
+        <img class="event-image" src="https://via.placeholder.com/400x200" alt="June 6th Event">
+        <p>Join us on June 6th for an exclusive event featuring limited edition items. Be the first to explore our latest collections!</p>
+        <div class="countdown" id="countdown1"></div>
+    </div>
+
+    <div id="event2">
+        <h2>January 4th Event</h2>
+        <img class="event-image" src="https://via.placeholder.com/400x200" alt="January 4th Event">
+        <p>Mark your calendars for January 4th! Don't miss out on our special event where you can discover unique limited edition products.</p>
+        <div class="countdown" id="countdown2"></div>
+    </div>
+
+    <p>Stay tuned for more updates and exciting offers!</p>
+</div>
+
+<script>
+    // Set the event date and time (Year, Month (0-11), Day, Hour, Minute, Second)
+    const event1Date = new Date(2024, 5, 6, 0, 0, 0); // June 6th
+    const event2Date = new Date(2024, 11, 30, 0, 0, 0); // January 4th
+
+    // Update the countdown every second
+    const countdown1 = document.getElementById('countdown1');
+    const countdown2 = document.getElementById('countdown2');
+
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+        const now = new Date();
+
+        // Calculate the remaining time for Event 1
+        const timeLeft1 = event1Date - now;
+        const days1 = Math.floor(timeLeft1 / (1000 * 60 * 60 * 24));
+        const hours1 = Math.floor((timeLeft1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes1 = Math.floor((timeLeft1 % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds1 = Math.floor((timeLeft1 % (1000 * 60)) / 1000);
+
+        // Update the countdown display for Event 1
+        countdown1.innerHTML = `Countdown: ${days1}d ${hours1}h ${minutes1}m ${seconds1}s`;
+
+        // Calculate the remaining time for Event 2
+        const timeLeft2 = event2Date - now;
+        const days2 = Math.floor(timeLeft2 / (1000 * 60 * 60 * 24));
+        const hours2 = Math.floor((timeLeft2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes2 = Math.floor((timeLeft2 % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds2 = Math.floor((timeLeft2 % (1000 * 60)) / 1000);
+
+        // Update the countdown display for Event 2
+        countdown2.innerHTML = `Countdown: ${days2}d ${hours2}h ${minutes2}m ${seconds2}s`;
+    }
+
+    // Initial call to update countdowns
+    updateCountdown();
+</script>
+
+</body>
+</html>

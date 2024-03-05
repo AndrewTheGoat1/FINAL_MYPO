@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Review Page</title>
+</head>
+
+<body>
+    <section id="header">
+            <h4>MYPO</h4>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a class="active" href="review.html">Reviews</a></li>
+                    <li><a href="about.html">About&Contact</a></li>
+                    
+                </ul>
+            </div>
+    </section>
+    <div class="container">
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="shop revp">Customer Reviews</div>
+            <div class="lap">Please Review our website</div>
+            <form action="#" method="post" id="reviewForm">
+                <div class="textarea">
+                    <textarea name="review" id="review" placeholder="Describe your experience.."></textarea>
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="about">About:</label>
+                <textarea id="about" name="about" rows="4" placeholder="Tell us more about your experience..." required></textarea>
+                <div class="btn">
+                    <button class="post" type="submit">Post</button>
+                </div>
+            </form>
+            
+                
+            <div id="thanksMessage">
+                Thanks for rating us!
+            </div>
+        </div>
+
+        <!-- Reviews Container -->
+        <div class="reviews-container">
+            <div class="shop revp">Customer Reviews</div>
+            <div class="reviews" id="reviewBoxes">
+            
+            <div class="box">
+                <i class="quote fas fa-quote-right"></i>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">John Doe</div>
+                        <div class="job">Web Developer</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="img/people/1.png" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    I am extremely satisfied with the quality of the products. The packaging is also excellent.
+                </div>
+            </div>
+            <div class="box">
+                <i class="quote fas fa-quote-right"></i>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Phyo Thandar Hlaing</div>
+                        <div class="job">Teacher</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="img/people/3.png" alt="">
+                    </div>
+                </div>
+                <div class="text">  I'm delighted to share my positive experience with this fashion website. The service is top-notch,
+                    with very qualified and attentive customer service. Moreover, the product quality exceeded my
+                    expectations. Overall, a fantastic shopping experience!
+                </div>
+            </div>
+            <div class="box">
+                <i class="quote fas fa-quote-right"></i>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Jane Smith</div>
+                        <div class="job">Designer</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="img/people/1.png" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    The products are amazing, and they really suit my skin. I would highly recommend Glimmer Glass to
+                    everyone.
+                </div>
+            </div>
+            <div class="box">
+                <i class="quote fas fa-quote-right"></i>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Mark Wilson</div>
+                        <div class="job">Graphic Designer</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="img/people/2.png" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    The customer service is excellent. They are very responsive and helpful. I will continue to shop
+                    from Glimmer Glass.
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <!-- (Your existing review boxes code) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ... (Previous code) ... -->
+
+    <!-- ... (Previous code) ... -->
+
+    <!-- ... (Previous code) ... -->
+
+<script>
+    const reviewForm = document.getElementById('reviewForm');
+    const thanksMessage = document.getElementById('thanksMessage');
+
+    reviewForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Check if all fields are filled
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const about = document.getElementById('about').value;
+
+        if (name && email && about) {
+            // Hide the form and display thanks message
+            reviewForm.style.display = 'none';
+            thanksMessage.style.display = 'block';
+        } else {
+            // Handle the form submission as usual
+            // You can add your own logic here
+            console.log('Please fill in all the required fields.');
+        }
+    });
+</script>

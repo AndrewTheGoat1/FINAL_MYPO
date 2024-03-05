@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Limited Edition</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/shop.css">
+        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet" href="css/about.css">
+
+        <style>
+            .limited-box{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                margin-bottom: 50px;
+            }
+            .item {
+                text-align: center;
+                background-color: #dce0e1;
+                padding: 20px;
+                box-shadow: 0 50px 50px #757676;
+                letter-spacing: 1px;
+            }
+            .item img {
+                width: 90%;
+            }
+            .item .title {
+                font-weight: 600;
+            }
+            .item .price {
+                margin: 10px;
+            }
+            .item button {
+                background-color: #1c1f25;
+                color: #fff;
+                padding: 10px;
+                width: 100%;
+            }
+
+            .detail {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #333333d2;
+                z-index: 1000;
+                display: none;
+                place-items: center;
+            }
+            .detail-box {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                max-width: 600px;
+                position: relative;
+            }
+            .detail-box img {
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+            .detail-box .modal-addbtn {
+                padding: 10px;
+                background: #333;
+                color: white;
+                border-radius: 5px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+            .close-modal {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                border: none;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: transparent;
+            }
+        </style>
+    </head>
+
+    <body>
+
+<!-- Navbar -->
+
+<section id="header" class="header">
+    <h4 class="logo">MYPO</h4>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="about.html">About & Contact</a></li>
+      </ul>
+    </div>
+    <div class="header-btns">
+      <button class="login-btn">Login</button>
+      <div class="shopping-cart" onclick="goToAddToCart()">
+        <img src="img/shopbag.svg" />
+        <span class="quantity">0</span>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- Blog -->
+
+        <section id="page-header" class="about-header" style="background-image: url(img/banner/b2.jpg);">
+            <h2>#somethingNew</h2>
+            <p>Can you GUESS what will come next?</p>
+        </section>
+
+<!-- About Head  -->
+
+        <section id="about-head" class="section-p1">
+            <img src="img/banner/Screenshot (27).png" alt="">
+            <div>
+                <h2>It's coming!!!</h2>
+                <!-- <p>"Explore MYPO's fashion odyssey with exclusive limited editions, 
+                    unveiling trendsetting collections on June 6 and sparking fresh styles on December 30. 
+                    These brief moments of sartorial brilliance capture the essence of innovation,
+                     ensuring your style stands out. Hurry, these must-buy pieces redefine contemporary fashion, 
+                     offering a touch of the extraordinary for those craving standout style."
+
+                    </p> -->
+                    <p>Explore MYPO with exclusive limited editions.</p>
+                    <p>It's time to shop the new features.</br>Grab 'em before they're gone! Limited edition sale with limited stock!<br/>Limited edition items flying off the shelves - act fast!</p>
+                    <abbr title=""></abbr>
+                <br><br>
+                <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">🌟 Introducing our Limited Edition Drops! ⏰ Set your calendar for
+                    exclusive releases:
+                    6th June and 30th December sharp! Only 5 items available each time.
+                     Act fast to snag your style statement! 
+                    🛍️ #LimitedEdition #FashionFrenzy</marquee>
+                    
+            </div>
+        </section>
+
+        <section id="limited" style="padding: 40px 80px;">
+            <h3 style="font-size: 25px; margin-bottom: 20px;">Limited Products</h3>
+            <div id="limited-box" class="limited-box"></div>
+        </section>
+        <div id="limited-detail" class="detail">
+            <div class="detail-box" id="limited-detail-box"></div>
+          </div>
+
+        <section id="last">
+            <h2>Previous Limited-Edition Items</h2>
+        </section>
+        <section id="product1" class="section-p1">
+            <div class="pro-container" id="prev-limited">
+                
+            </div>
+        </section>
+
+    <!-- Newsletter-->
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <a href="login.html" class="normal">Sign Up</a>
+        </div>
+    </section>
+
+<!-- Footer -->
+
+        <footer class="section-p1">
+            <div class="col">
+                <a href="/index.html" style="font-size: larger;">MYPO</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> Pathein , Ayeyarwady</p>
+                <p><strong>Phone: </strong> +959*********</p>
+                <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Whitelist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="img/pay/app.jpg" alt="">
+                    <img src="img/pay/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways </p>
+                <img src="img/pay/pay.png" alt="">
+            </div>
+
+            <div class="copyright">
+                <p>@ 2023, MYPO etc - Shopping Website</p>
+            </div>
+        </footer>
+
+        
+        <script src="./products.js" defer></script>
+        <script src="./addtocart.js" defer></script>
+        <script src="./limited.js" defer></script>
+        <script>
+            // Set the event date and time (Year, Month (0-11), Day, Hour, Minute, Second)
+            const event1Date = new Date(2024, 5, 6, 0, 0, 0); // June 6th
+            const event2Date = new Date(2024, 11, 30, 0, 0, 0); // January 4th
+        
+            // Update the countdown every second
+            const countdown1 = document.getElementById('countdown1');
+            const countdown2 = document.getElementById('countdown2');
+        
+            setInterval(updateCountdown, 1000);
+        
+            function updateCountdown() {
+                const now = new Date();
+        
+                // Calculate the remaining time for Event 1
+                const timeLeft1 = event1Date - now;
+                const days1 = Math.floor(timeLeft1 / (1000 * 60 * 60 * 24));
+                const hours1 = Math.floor((timeLeft1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes1 = Math.floor((timeLeft1 % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds1 = Math.floor((timeLeft1 % (1000 * 60)) / 1000);
+        
+                // Update the countdown display for Event 1
+                countdown1.innerHTML = `Countdown: ${days1}d ${hours1}h ${minutes1}m ${seconds1}s`;
+        
+                // Calculate the remaining time for Event 2
+                const timeLeft2 = event2Date - now;
+                const days2 = Math.floor(timeLeft2 / (1000 * 60 * 60 * 24));
+                const hours2 = Math.floor((timeLeft2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes2 = Math.floor((timeLeft2 % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds2 = Math.floor((timeLeft2 % (1000 * 60)) / 1000);
+        
+                // Update the countdown display for Event 2
+                countdown2.innerHTML = `Countdown: ${days2}d ${hours2}h ${minutes2}m ${seconds2}s`;
+            }
+        
+            // Initial call to update countdowns
+            updateCountdown();
+        </script>
+    </body>
+
+</html>
