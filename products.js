@@ -5,15 +5,31 @@ const categories = [
   },
   {
     id: 1,
-    name: "Clothes",
+    name: "Trends",
   },
   {
     id: 2,
-    name: "Glass",
+    name: "Tops",
   },
   {
     id: 3,
+    name: "Skirts",
+  },
+  {
+    id: 4,
+    name: "GarWon",
+  },
+  {
+    id: 5,
+    name: "Pants",
+  },
+  {
+    id: 6,
     name: "Bags",
+  },
+  {
+    id: 7,
+    name: "Glasses",
   },
 ];
 
@@ -23,7 +39,8 @@ const products = [
     name: "Slim Fit Dress",
     image: "dr1.jpg",
     price: 13000,
-    categoryId: 1,
+    categoryId: 4,
+    detail: "loremksfjdiasdf ifewafhusdhfwaidfshvihdfahdfscxbhvzsbcxdvzcxbvhzxbc jbhszhvsfhwgfiuafhwufhsf",
   },
   {
     id: 2,
@@ -44,7 +61,7 @@ const products = [
     name: "Bridemaid Dress",
     image: "e1.jpg",
     price: 35000,
-    categoryId: 1,
+    categoryId: 4,
   },
   {
     id: 5,
@@ -58,7 +75,7 @@ const products = [
     name: "Cargo Pant",
     image: "j13.jpg",
     price: 17000,
-    categoryId: 1,
+    categoryId: 5,
   },
   {
     id: 7,
@@ -72,14 +89,14 @@ const products = [
     name: "Jean Pant",
     image: "p18.jpg",
     price: 28000,
-    categoryId: 1,
+    categoryId: 5,
   },
   {
     id: 9,
     name: "Jean Flare Pant",
     image: "j4.jpg",
     price: 32000,
-    categoryId: 1,
+    categoryId: 5,
   },
   {
     id: 10,
@@ -93,21 +110,21 @@ const products = [
     name: "Black Mermaid",
     image: "e13.jpg",
     price: 28000,
-    categoryId: 1,
+    categoryId: 4,
   },
   {
     id: 12,
     name: "Black Mermaid",
     image: "e8.jpg",
     price: 27000,
-    categoryId: 1,
+    categoryId: 4,
   },
   {
     id: 13,
     name: "Fancy Glass",
     image: "p27.jpg",
     price: 7000,
-    categoryId: 2,
+    categoryId: 7,
   },
   {
     id: 14,
@@ -121,28 +138,28 @@ const products = [
     name: "Fancy Glass",
     image: "p28.jpg",
     price: 7000,
-    categoryId: 2,
+    categoryId: 7,
   },
   {
     id: 16,
     name: "Fancy Bag",
     image: "b3.jpg",
     price: 7000,
-    categoryId: 3,
+    categoryId: 6,
   },
   {
     id: 17,
     name: "Fancy Bag One",
     image: "b2.jpg",
     price: 8000,
-    categoryId: 3,
+    categoryId: 6,
   },
   {
     id: 18,
     name: "Fancy Bag Two",
     image: "b4.jpg",
     price: 9000,
-    categoryId: 3,
+    categoryId: 6,
   },
 ];
 
