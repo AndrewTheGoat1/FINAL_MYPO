@@ -23,7 +23,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100%;
       }
 
       .input-label {
@@ -183,6 +183,20 @@
           required
         />
       </div>
+
+      <!-- Delivery -->
+
+      <div class="input-label">
+        <label for="paymentMethod">Delivery Service:</label>
+        <select class="input" id="paymentMethod" required>
+          <option value="" disabled selected>Choose Delivery Service</option>
+          <option value="KBZPay">Royal Express</option>
+          <option value="WaveMoney">Ninja Van</option>
+          <option value="CB Pay">BEE Express</option>
+        </select>
+      </div>
+
+
       <!-- Payment Method -->
       <div class="input-label">
         <label for="paymentMethod">Payment Method:</label>

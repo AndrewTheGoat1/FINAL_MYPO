@@ -102,12 +102,18 @@ function showModal(itemId) {
         <img src="./img/newproduct/${currentItem.image}" alt="" />
         <div class="">
           <h3>${currentItem.name}</h3>
+          <br>
+          <select>
+                    <option>Select Size</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+          <p><b><u>Detail of item</u></b></p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptatibus assumenda deserunt officiis ipsam, qui esse itaque id
-            quisquam asperiores voluptatem corrupti facere consectetur minus
-            quasi quae nesciunt illum suscipit, nisi omnis! Blanditiis amet
-            fugiat similique error.
+            ${currentItem.detail}
           </p>
           <h5>${currentItem.price} MMK</h5>
           <button class="modal-addbtn" onclick="addToCard(${itemId})">Add to cart</button>

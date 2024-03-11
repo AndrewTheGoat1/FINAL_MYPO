@@ -96,12 +96,7 @@
           </li>
           <li>
             <i class="fal fa-phone-alt">
-              <p>09*********</p>
-            </i>
-          </li>
-          <li>
-            <i class="fal fa-clock">
-              <p>Monday to Saturday - 9:00 Am to 16:00 Pm</p>
+              <p>09111222333</p>
             </i>
           </li>
         </div>
@@ -115,21 +110,15 @@
     <!-- Team & Contact  -->
 
     <section id="form-details">
-      <form action="">
-        <span>LEAAVE A MESSAGE</span>
-        <h2>We love to hear from you</h2>
-        <input type="text" placeholder="Your Name" />
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Subject" />
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-        ></textarea>
-        <button class="normal">Submit</button>
-      </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you</h2>
+            <input type="hidden" name="access_key" value="4e608500-73db-456e-a42d-d641c6561327">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button type="submit" class="normal">Submit</button>
+        </form>
 
       <div class="people">
         <div>
@@ -199,7 +188,7 @@
           <div class="follow">
               <h4>Follow Us</h4>
               <div class="icon">
-                  <i class="fab fa-facebook-f"></i>
+                  <a href="https://www.facebook.com/profile.php?id=61557159244538&mibextid=uzlsIk"><i class="fab fa-facebook-f"></i></a>
                   <i class="fab fa-twitter"></i>
                   <i class="fab fa-instagram"></i>
                   <i class="fab fa-pinterest-p"></i>
@@ -207,24 +196,24 @@
               </div>
           </div>
       </div>
-  
+    
       <div class="col">
         <h4>About</h4>
         <a href="#">About Us</a>
         <a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a>
         <a href="about.html">Contact Us</a>
       </div>
-  
+    
       <div class="col">
         <h4>My Account</h4>
         <a href="login.html">Sign In</a>
         <a href="about.html">Help</a>
       </div>
-  
+    
       <div class="copyright">
           <p>@ 2023, MYPO etc - Shopping Website</p>
       </div>
-  </footer>
+    </footer>
 
     <script src="./addtocart.js"></script>
   </body>

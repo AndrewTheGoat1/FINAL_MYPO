@@ -114,6 +114,7 @@ function showModal(itemId) {
         <img src="./img/newproduct/${currentItem.image}" alt="" />
         <div class="">
           <h3>${currentItem.name}</h3>
+          <br>
           <select>
                     <option>Select Size</option>
                     <option>Small</option>
@@ -122,6 +123,20 @@ function showModal(itemId) {
                     <option>XL</option>
                     <option>XXL</option>
                 </select>
+                <br>
+                <br>
+                <p>Please choose the color of item:</p>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">White</label>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Black</label>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">Red</label>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Blue</label>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">Green</label>
+                <p><b><u>Detail of item</u></b></p>
           <p>
             ${currentItem.detail}
           </p>
