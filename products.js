@@ -3,10 +3,10 @@ const categories = [
     id: 0,
     name: "All",
   },
-  {
-    id: 1,
-    name: "Trends",
-  },
+  // {
+  //   id: 1,
+  //   name: "Trends",
+  // },
   {
     id: 2,
     name: "Tops",
@@ -31,14 +31,14 @@ const categories = [
     id: 7,
     name: "Glasses",
   },
-  {
-    id: 8,
-    name: "Promotions",
-  },
-  {
-    id: 9,
-    name: "Spring/Summer",
-  },
+  // {
+  //   id: 8,
+  //   name: "Promotions",
+  // },
+  // {
+  //   id: 9,
+  //   name: "Spring/Summer",
+  // },
 ];
 
 const products = [
@@ -76,11 +76,12 @@ const products = [
   },
   {
     id: 5,
-    name: "Tube Top",
-    image: "p4.jpg",
-    price: 11000,
-    categoryId: 2,
-    detail: "Perfect for layering over some top. This is designed in soft, gentle fabric with a pretty shoulder off."
+    name: "Syren Black",
+    image: "sw3.jpg",
+    price: 24000,
+    categoryId: 1,
+    detail:"Mock neck, short sleeve, fitted dress with SYREN sign. Very nice fitted dress ever.",
+    type: "trendy",
   },
   {
     id: 6,
@@ -148,11 +149,11 @@ const products = [
   },
   {
     id: 14,
-    name: "Syren Black",
-    image: "sw3.jpg",
-    price: 24000,
-    categoryId: 1,
-    detail:"Mock neck, short sleeve, fitted dress with SYREN sign. Very nice fitted dress ever."
+    name: "Tube Top",
+    image: "p4.jpg",
+    price: 11000,
+    categoryId: 2,
+    detail: "Perfect for layering over some top. This is designed in soft, gentle fabric with a pretty shoulder off."
   },
   {
     id: 15,
@@ -192,7 +193,8 @@ const products = [
     image: "e17.jpg",
     price: 35000,
     categoryId: 1,
-    detail:"Women V neck slim fit dress with party long lantern sleeves."
+    detail:"Women V neck slim fit dress with party long lantern sleeves.",
+    type: "trendy",
   },
   {
     id: 20,
@@ -200,7 +202,8 @@ const products = [
     image: "j30.jpg",
     price: 21000,
     categoryId: 1,
-    detail:"High waist sexy jean short pant. If you're in the era of 20 , this suit very well."
+    detail:"High waist sexy jean short pant. If you're in the era of 20 , this suit very well.",
+    type: "trendy",
   },
   {
     id: 21,
@@ -212,11 +215,11 @@ const products = [
   },
   {
     id: 22,
-    name: "Waffle Pant",
-    image: "j25.jpg",
-    price: 24000,
-    categoryId: 5,
-    detail:"Khaki Waffle Pant for office worker and student. This can draw attention from everyone for sure."
+    name: "Butterfly Shoulder Bag",
+    image: "p42.jpg",
+    price: 17500,
+    categoryId: 6,
+    detail:"This small shoulder bag is a versatile and fashionable item that can be worn on your back no matter what you wear."
   },
   {
     id: 23,
@@ -228,19 +231,19 @@ const products = [
   },
   {
     id: 24,
-    name: "Tweed Skirt",
-    image: "s2.jpg",
-    price: 21500,
-    categoryId: 3,
-    detail:"This skirt is perfect for endlessly styling with your existing wardobe pieces."
+    name: "Bubbles",
+    image: "p8.jpg",
+    price: 15000,
+    categoryId: 2,
+    detail:"The soft, ribbed fibric is comfortable to wear all day long and the turtleneck neckline adds a touch of sophistication."
   },
   {
     id: 25,
-    name: "Butterfly Shoulder Bag",
-    image: "p42.jpg",
-    price: 17500,
-    categoryId: 6,
-    detail:"This small shoulder bag is a versatile and fashionable item that can be worn on your back no matter what you wear."
+    name: "Waffle Pant",
+    image: "j25.jpg",
+    price: 24000,
+    categoryId: 5,
+    detail:"Khaki Waffle Pant for office worker and student. This can draw attention from everyone for sure."
   },
   {
     id: 26,
@@ -252,11 +255,11 @@ const products = [
   },
   {
     id: 27,
-    name: "Bubbles",
-    image: "p8.jpg",
-    price: 15000,
-    categoryId: 2,
-    detail:"The soft, ribbed fibric is comfortable to wear all day long and the turtleneck neckline adds a touch of sophistication."
+    name: "Tweed Skirt",
+    image: "s2.jpg",
+    price: 21500,
+    categoryId: 3,
+    detail:"This skirt is perfect for endlessly styling with your existing wardobe pieces."
   },
   {
     id: 28,
@@ -276,19 +279,20 @@ const products = [
   },
   {
     id: 30,
-    name: "Jean Pant",
-    image: "p20.jpg",
-    price: 28500,
-    categoryId: 5,
-    detail:"Straight jeans loose high waist pants for casual and formal."
+    name: "Graphic Crop Tee",
+    image: "c5.jpg",
+    price: 11000,
+    categoryId: 2,
+    detail:"Graphic Tee with racing car style which is popular among teenage girl."
   },
   {
     id: 31,
-    name: "Drawstring Split Thigh Skirt",
-    image: "s15.jpg",
-    price: 33000,
-    categoryId: 3,
-    detail:"Midi Shirt ruched Drawsttring Slit Thigh Skirt For Casual Party."
+    name: "Lady D Joy",
+    image: "b40.jpg",
+    price: 26000,
+    categoryId: 1,
+    detail:"Beautiful luxury design handbag.If you are with this , that's sure you're so elegant.",
+    type: "trendy",
   },
   {
     id: 32,
@@ -340,11 +344,11 @@ const products = [
   },
   {
     id: 38,
-    name: "Graphic Crop Tee",
-    image: "c5.jpg",
-    price: 11000,
-    categoryId: 2,
-    detail:"Graphic Tee with racing car style which is popular among teenage girl."
+    name: "Jean Pant",
+    image: "p20.jpg",
+    price: 28500,
+    categoryId: 5,
+    detail:"Straight jeans loose high waist pants for casual and formal."
   },
   {
     id: 39,
@@ -356,11 +360,11 @@ const products = [
   },
   {
     id: 40,
-    name: "Lady D Joy",
-    image: "b40.jpg",
-    price: 26000,
-    categoryId: 1,
-    detail:"Beautiful luxury design handbag.If you are with this , that's sure you're so elegant."
+    name: "Drawstring Split Thigh Skirt",
+    image: "s15.jpg",
+    price: 33000,
+    categoryId: 3,
+    detail:"Midi Shirt ruched Drawsttring Slit Thigh Skirt For Casual Party."
   },
   {
     id: 41,
@@ -368,7 +372,8 @@ const products = [
     image: "c18.jpg",
     price: 14000,
     categoryId: 9,
-    detail:"Our tank top offers high stretch for a snug, adaptable fit;ensuring you enjoy every moment of your outings without any restrictions."
+    detail:"Our tank top offers high stretch for a snug, adaptable fit;ensuring you enjoy every moment of your outings without any restrictions.",
+    type: "upcoming",
   },
   {
     id: 42,
@@ -376,7 +381,8 @@ const products = [
     image: "s16.jpg",
     price: 12000,
     categoryId: 9,
-    detail:"This skirt is perfect for teen who love to going lingerie party outfit and clubwear."
+    detail:"This skirt is perfect for teen who love to going lingerie party outfit and clubwear.",
+    type: "upcoming",
   },
   {
     id: 43,
@@ -384,7 +390,8 @@ const products = [
     image: "c25.jpg",
     price: 10000,
     categoryId: 9,
-    detail:"Pearls Trim Asymmetrical Hem Carmi Top with Heart Shape."
+    detail:"Pearls Trim Asymmetrical Hem Carmi Top with Heart Shape.",
+    type: "upcoming",
   },
   {
     id: 44,
@@ -392,7 +399,8 @@ const products = [
     image: "p39.jpg",
     price: 9000,
     categoryId: 9,
-    detail:"mini patent leather tote with foldover top and circulat handle"
+    detail:"mini patent leather tote with foldover top and circulat handle",
+    type: "upcoming",
   },
   {
     id: 45,
@@ -400,7 +408,9 @@ const products = [
     image: "c30.jpg",
     price: 18000,
     categoryId: 8,
-    detail:"Top with amazing front tie and back crop pattern. Bset for dinner night."
+    detail:"Top with amazing front tie and back crop pattern. Bset for dinner night.",
+    type: "promotion",
+    normal_price: 22000,
   },
   {
     id: 46,
@@ -408,7 +418,9 @@ const products = [
     image: "dr3.jpg",
     price: 16500,
     categoryId: 8,
-    detail:"Fill Trim Ruched Bust Cami Dress for casual daily. It's super comfortable to wear."
+    detail:"Fill Trim Ruched Bust Cami Dress for casual daily. It's super comfortable to wear.",
+    type: "promotion",
+    normal_price: 20000,
   },
 ];
 
@@ -451,7 +463,7 @@ const limitedProducts = [
   },
   {
     id: 1005,
-    name: "Tube Top",
+    name: "Mini Skirt",
     image: "s9.jpg",
     price: 110000,
     categoryId: 1,
@@ -459,7 +471,7 @@ const limitedProducts = [
   },
   {
     id: 1006,
-    name: "Cargo Pant",
+    name: "Jump Suit",
     image: "pro1.jpg",
     price: 170000,
     categoryId: 1,
@@ -467,7 +479,7 @@ const limitedProducts = [
   },
   {
     id: 1007,
-    name: "Crochet skirt",
+    name: "Designer Bag",
     image: "b27.jpg",
     price: 220000,
     categoryId: 1,
@@ -475,7 +487,7 @@ const limitedProducts = [
   },
   {
     id: 1008,
-    name: "Crochet skirt",
+    name: "Fairy Grunge Skirt",
     image: "s4.jpg",
     price: 210000,
     categoryId: 1,
